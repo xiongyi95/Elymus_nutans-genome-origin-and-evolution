@@ -14,3 +14,10 @@ This folder includes counting, merging, filtering and evaluating VCF files.
 
 ## 05_population_analysis
 Codes in this folder describe the popultaion structure of different Elymus nutans population.
+
+## 06_environmental adaptation
+Codes in this folder describe the Elymus nutans environmental adaptation
+
+## 07_UVB_GWAS
+This folder includes UVB_GWAS for 197 Elymus nutans
+
