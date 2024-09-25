@@ -9,7 +9,7 @@ PAML_PATH="/path/to/paml"  # Path to PAML package (YN00 for Ka/Ks calculation)
 
 # Step 1: Merge protein sequences of rice and E. nutans and perform alignment using diamond_blastp.pl
 cat ${RICE_PROTEINS} ${E_NUTANS_PROTEINS} > ${OUTPUT_DIR}/merged_proteins.fasta
-${WGDI_PATH}/scripts/diamond_blastp.pl -i ${OUTPUT_DIR}/merged_proteins.fasta -o ${OUTPUT_DIR}/blastp_results.txt
+diamond_blastp.pl -i ${OUTPUT_DIR}/merged_proteins.fasta -o ${OUTPUT_DIR}/blastp_results.txt
 
 # Step 2: Extract collinear genes using the -icl parameter
 WGDI -i ${OUTPUT_DIR}/blastp_results.txt -icl -o ${OUTPUT_DIR}/collinear_genes.txt
@@ -19,7 +19,7 @@ WGDI -i ${OUTPUT_DIR}/blastp_results.txt -icl -o ${OUTPUT_DIR}/collinear_genes.t
 # Extract sequences and prepare input for YN00 (requires sequence alignment preprocessing)
 WGDI -i ${OUTPUT_DIR}/collinear_genes.txt -ks -o ${OUTPUT_DIR}/ka_ks_results.txt
 cd ${OUTPUT_DIR}
-${PAML_PATH}/bin/yn00 yn00.ctl  # Ensure yn00.ctl is properly configured with correct input files
+yn00 yn00.ctl  # Ensure yn00.ctl is properly configured with correct input files
 
 # Step 4: Integrate results from steps 2 and 3 using the -bi parameter
 WGDI -i ${OUTPUT_DIR}/collinear_genes.txt -bi ${OUTPUT_DIR}/ka_ks_results.txt -o ${OUTPUT_DIR}/integrated_results.txt
