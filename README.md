@@ -1,1 +1,1 @@
-# Elymus_nutans-genome-origin-and-evolution
+# A high-quality reference genome assembly of allohexaploid wheatgrass Elymus nutans (Poaceae: Triticeae) reveals its origin, evolution and high-altitude adaption
