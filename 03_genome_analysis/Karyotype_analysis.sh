@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Define input paths and output directories
-E_NUTANS_PROTEINS="path/to/elymus_nutans_proteins.fasta"  # Path to the protein sequences of E. nutans
-RICE_PROTEINS="path/to/rice_proteins.fasta"  # Path to the protein sequences of rice
-OUTPUT_DIR="karyotype_analysis"  # Output directory for analysis results
-WGDI_PATH="/path/to/wgdi"  # Path to the WGDI software
-PAML_PATH="/path/to/paml"  # Path to PAML package (YN00 for Ka/Ks calculation)
-
 # Step 1: Merge protein sequences of rice and E. nutans and perform alignment using diamond_blastp.pl
 cat ${RICE_PROTEINS} ${E_NUTANS_PROTEINS} > ${OUTPUT_DIR}/merged_proteins.fasta
 diamond_blastp.pl -i ${OUTPUT_DIR}/merged_proteins.fasta -o ${OUTPUT_DIR}/blastp_results.txt
