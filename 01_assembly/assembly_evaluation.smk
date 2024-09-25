@@ -1,4 +1,3 @@
-# Set input and output paths
 ASSEMBLY = "path/to/assembly.fasta"  # Path to the HiFi assembly result file
 HIFI_READS = "path/to/hifi_reads.fastq"  # Path to HiFi sequencing data file
 HIC_READS_1 = "path/to/hic_reads_R1.fastq"  # Path to Hi-C sequencing data file (R1)
