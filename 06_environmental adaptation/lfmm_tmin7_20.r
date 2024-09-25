@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 library(LEA)
 library(qvalue)
 #library(tidyverse)
