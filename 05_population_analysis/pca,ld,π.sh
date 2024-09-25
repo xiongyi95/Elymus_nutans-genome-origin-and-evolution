@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define input VCF file and output directory
-VCF_FILE="input_snps.vcf.gz"  
+VCF_FILE="snps.vcf.gz"  
 OUTPUT_DIR="analysis_results" 
 mkdir -p ${OUTPUT_DIR}
 
