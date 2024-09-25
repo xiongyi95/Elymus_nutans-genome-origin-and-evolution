@@ -1,4 +1,4 @@
-
+#!/usr/bin/env Rscript
 library(vegan)
 library(psych)
 library(data.table)
