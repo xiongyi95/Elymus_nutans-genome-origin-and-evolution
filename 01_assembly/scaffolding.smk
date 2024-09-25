@@ -1,4 +1,3 @@
-# Define directories and input files
 hicdir = "path/to/hic_data"  # Set the directory path for Hi-C data
 fq1 = f"{hicdir}/hic_1.fastq.gz"  # Hi-C reads R1
 fq2 = f"{hicdir}/hic_2.fastq.gz"  # Hi-C reads R2
